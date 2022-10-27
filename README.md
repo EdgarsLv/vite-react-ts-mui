@@ -13,3 +13,7 @@ React-Helmet-Async,
 Auth flow - protected, public routes.
 
 Dark/Light Theme
+
+Clone or use as Template!
+->npm install
+->npm run dev
