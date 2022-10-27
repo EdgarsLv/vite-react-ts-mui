@@ -9,12 +9,12 @@ import {
 import palette from './palette';
 import typography from './typography';
 import breakpoints from './breakpoints';
-// import componentsOverride from './overrides'
-// import { useThemeMode } from '../contexts/ThemeContext'
+import componentsOverride from './overrides';
+import { useThemeMode } from '../contexts/ThemeContext';
 
 export default function ThemeProvider({ children }: { children: ReactNode }) {
-  // const { isDark } = useThemeMode()
-  const isDark = false;
+  const { isDark } = useThemeMode();
+
   const themeOptions = useMemo(
     () => ({
       palette: isDark ? palette.dark : palette.light,
@@ -26,7 +26,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
   );
 
   const theme = createTheme(themeOptions as ThemeOptions);
-  // theme.components = componentsOverride(theme)
+  theme.components = componentsOverride(theme);
 
   return (
     <StyledEngineProvider injectFirst>

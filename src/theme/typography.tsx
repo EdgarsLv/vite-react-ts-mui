@@ -1,7 +1,7 @@
-import { pxToRem } from '../utils/pxToRem'
-import { TypographyVariantsOptions } from '@mui/material/styles'
+import { pxToRem } from '../utils/pxToRem';
+import { TypographyVariantsOptions } from '@mui/material/styles';
 
-const FONT_PRIMARY = 'Rokkitt, serif'
+const FONT_PRIMARY = 'Rokkitt, serif';
 
 const typography: TypographyVariantsOptions = {
   fontFamily: FONT_PRIMARY,
@@ -73,6 +73,6 @@ const typography: TypographyVariantsOptions = {
     fontSize: pxToRem(14),
     textTransform: 'capitalize',
   },
-}
+};
 
-export default typography
+export default typography;
